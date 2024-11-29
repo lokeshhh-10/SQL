@@ -20,4 +20,30 @@ SELECT DISTINCT length(MAJOR) FROM Student;
 
 -- 6. Write a SQL query to print FIRST_NAME from the Student table after replacing 'a' with 'A'.
 
-SELECT replace(FIRST_NAME, "a", "A") 
+SELECT replace(FIRST_NAME, "a", "A") ;
+
+-- 7. Write a SQL query to print the FIRST_NAME and LAST_NAME from Student table into single column COMPLETE_NAME.
+
+SELECT Concat(FIRST_NAME, " ", Last_NAME) AS COMPLETE_NAME FROM Student;
+
+-- 8. Write a SQL query to print all Student details from Student table order by FIRST_NAME Ascending and MAJOR Subject descending .
+
+SELECT * FROM STUDENT ORDER BY FIRST_NAME, MAJOR DES;
+
+-- 9. Write a SQL query to print details of the Students with the FIRST_NAME as 'Prem' and 'Shivansh' from Student table.
+-- SELECT * from Student W
+
+SELECT * FROM STUDENT WHERE FIRST_NAME = 'Prem' or FIRST_NAME = 'Shivansh';
+
+-- 10. Write a SQL query to print details of the Students excluding FIRST_NAME as 'Prem' and 'Shivansh' from Student table.
+
+SELECT * FROM STUDENT WHERE FIRST_NAME NOT IN ("Prem", "Shivani");
+
+-- 11. Write a SQL query to print details of the Students whose FIRST_NAME ends with 'a'.
+
+SELECT * FROM Student WHERE FIRST_NAME LIKE '%a';
+
+-- 12. Write an SQL query to print details of the Students whose FIRST_NAME ends with ‘a’ and contains six alphabets.
+
+SELECT * FROM Student WHERE FIRST_NAME LIKE '%a' AND length(FIRST_NAME) == 6 ;
+
